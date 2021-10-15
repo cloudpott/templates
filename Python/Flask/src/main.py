@@ -16,13 +16,21 @@ def create_app(config):
     flaskname = config.get("app_name")
     application = Flask(flaskname)
 
+    @application.route('/',methods=['GET'])
+    def health_check():
+        return  {
+                    "detail":"Working"
+                }
+    
     @application.route('/health',methods=['GET'])
-    def health():
+    def health_status():
         return health_controller.main(config)
 
     @application.route('/get_sample', methods = ['GET'])
     def get_sample():
         username = request.args.get("username")
+        if username == None:
+            return{"detail":"username parameter missing"},400
         return get_sample_controller.main(config, username)
 
     return application

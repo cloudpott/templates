@@ -7,7 +7,7 @@ class DatabaseManagement():
         try:
             print("Connected to database: {}".format(self.db_endpoint))
         except Exception as error:
-            print("error")
+            print(error)
     
     def get_data(self, config):
         """

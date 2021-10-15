@@ -1,0 +1,10 @@
+{
+    "app_name": "flask_template",
+    "db_endpoint": "test_endpoint",
+    "message": {
+        "username": "",
+        "data": "VGhpcyBpcyBhIGJhc2U2NCBlbmNvZGVkIG1lc3NhZ2U=",
+        "details": "Hello World sample",
+        "method": ""
+    }
+}
